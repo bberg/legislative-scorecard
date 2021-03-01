@@ -47,7 +47,7 @@ class Bills extends React.PureComponent {
           <section>
             <div className="row">
               <div className="col-xs"><div className="box">
-                <h1>Bills</h1>
+                <h1>Votes</h1>
               </div></div>
               <div className="col-xs-12 col-sm-4 col-md-3"><div className="box">
                 <Select options={filterOptions} value={filter} onChange={this.handeFilterChange} className="full-width" />

@@ -24,19 +24,21 @@ function Bill(props) {
   const {
     uniqueKey,
     title,
+    action,
     additionalInformation,
+    votes,
   } = bill
 
   const billId = props.bill.uniqueKey.replace(/\s/g, '\u00A0')
-  
 
   return (
     <div className="list-item">
       <div className="row">
         <div className="col-xs"><div className="box title-description">
-            {uniqueKey} &nbsp;
-          <div className="description">{title}</div>
+            {title} - {action} &nbsp;
+          <div className="description">{uniqueKey}</div>
           <div className="description">{additionalInformation}</div>
+          <div className="description"> {JSON.stringify(votes,null,4)} </div>
         </div></div>
         <div className="col-xs-12 col-sm-2"><div className="box">
         </div></div>
