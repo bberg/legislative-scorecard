@@ -1,7 +1,10 @@
 import legislators from './legislators.json'
 import bills from './bills.json'
+import dcbills from './dcbills.json'
+import dcbillstest from './dcbillstest.json'
 import aboutSections from './aboutSections.json'
 import faqs from './faqs.json'
+import slug from 'slug'
 
 // Index legislators by ocdId
 const legislatorsByOcdId = {}
@@ -11,9 +14,10 @@ legislators.forEach(function(legislator) {
 
 // Index bills by id
 const billsById = {}
-bills.forEach(function(bill) {
-  billsById[bill.id] = bill
+dcbills.forEach(function(bill) {
+  billsById[slug(bill.uniqueKey)] = bill
 })
+
 
 export {
   legislators,
@@ -22,4 +26,6 @@ export {
   billsById,
   aboutSections,
   faqs,
+  dcbills,
+  dcbillstest,
 }

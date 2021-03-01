@@ -15,13 +15,12 @@ import PageNotFound from './components/PageNotFound'
 class App extends Component {
 
   render() {
-
     return (
       <div className="App">
         <Header />
         <div className="">
           <Switch>
-            <Route path="/" exact render={() => <Redirect to='/legislators' />} />
+            <Route path="/" exact render={() => <Redirect to='/all-scores' />} />
             <Route path='/legislators/:ocdId/:slug?' component={LegislatorDetail} />
             <Route path='/legislators' component={Legislators} />
             <Route path='/bills/:billId/:slug?' component={BillDetail} />
@@ -33,7 +32,7 @@ class App extends Component {
         </div>
         <div className="footer">
           <div className="container">
-            <p>Made with &hearts; using open source tools from <a href="https://github.com/Code4Maine" target="_blank" rel="noopener noreferrer">Code for Maine</a></p>
+
           </div>
         </div>
         <ScrollToTop />

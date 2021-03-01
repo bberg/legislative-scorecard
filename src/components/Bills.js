@@ -1,26 +1,30 @@
 import React from 'react'
 import BillList from './BillList'
-import { bills as allBills } from '../data/'
+import { dcbills as allBills } from '../data/'
+// import dcbills from '../data/'
 import Select from './Select'
 import memoize from 'lodash/memoize'
 import isEmpty from 'lodash/isEmpty'
 
 
 const filterOptions = [
+  {value: 'all', label:'All Bills'},
   { value: '2018Bills', label: '2018 bills' },
   { value: 'voterBills', label: 'Will of the Voters bills' },
 ]
 
 class Bills extends React.PureComponent {
   state = {
-    filter: '2018Bills',
+    filter: 'all',
   }
 
   getCachedBills = memoize(function(filter) {
     if (filter === '2018Bills')
       return allBills.filter(bill => bill.is_2018_bill)
-    else
+    else if (filter === 'voterBills')
       return allBills.filter(bill => !isEmpty(bill.voter_stance))
+    else
+      return allBills
   })
 
   getBills() {

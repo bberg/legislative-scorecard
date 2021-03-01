@@ -6,6 +6,7 @@
     "airtable": "^0.5.4",
     "async": "^2.6.0",
     "cheerio": "^1.0.0-rc.2",
+    "csvtojson": "^2.0.10",
     "dotenv": "^5.0.1",
     "faker": "^4.1.0",
     "fetch-cached": "^2.0.3",
