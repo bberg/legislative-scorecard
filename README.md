@@ -1,4 +1,4 @@
-This project has been cloned from https://github.com/pmlord/legislative-scorecard
+Forked from https://github.com/pmlord/legislative-scorecard
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
